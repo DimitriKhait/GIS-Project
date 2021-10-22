@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="body-container">
+        <h1> <i class="fas fa-user-graduate"></i>  חיפוש ביקור רופא</h1>
+
+        <div class="form-control">
+            <input id="search" type="text" placeholder="חיפוש מקום ידני...">
+        </div>
+
+        <div id=map></div>
+
+
+
+        <div class="wrapper">
+            <form class="myForm" autocomplete="off" method="POST">
+                <div class="autocomplete" style="width:300px;">
+                    <input id="myInput" type="text" name="placeName" placeholder="אנא הקלד\י איזור (צפון\דרום\מרכז)">
+                </div>
+                <input type="submit">
+            </form>
+        </div>
+
+        <div class="father_forms_div">
+
+            <div class="wrapper">
+                <form id="North_Form" hidden>
+                    <select id="צפון" onchange="initMapNorth()">
+                        <option value="דפולטיבי" selected>בחר מרפאה </option>
+                        <option value="קרית_שמונה">קרית שמונה</option>
+                        <option value="קריות">קריות</option>
+                        <option value="קצרין">קצרין</option>
+                        <option value="עפולה">עפולה</option>
+                        <option value="נהריה">נהריה</option>
+                        <option value="כרמיאל">כרמיאל</option>
+                        <option value="חיפה">חיפה</option>
+                        <option value="חדרה">חדרה</option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="wrapper take_to_top">
+                <form id="South_Form" hidden>
+                    <select id="דרום" onchange="initMapSouth()">
+                        <option value="דפולטיבי" selected>בחר מרפאה</option>
+                        <option value="מצפה_רמון">מצפה רמון</option>
+                        <option value="ירוחם">ירוחם</option>
+                        <option value="באר_שבע">באר שבע</option>
+                        <option value="אשקלון">אשקלון</option>
+                        <option value="אשדוד">אשדוד</option>
+                        <option value="אילת">אילת</option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="wrapper take_to_top">
+                <form id="Center_Form" hidden>
+                    <select id="מרכז" onchange="initMapCenter()">
+                        <option value="דפולטיבי" selected>בחר מרפאה</option>
+                        <option value="תל_אביב">תל אביב</option>
+                        <option value="ראשון_לציון">ראשון לציון</option>
+                        <option value="נתניה">נתניה</option>
+                        <option value="מודיעין">מודיעין</option>
+                        <option value="מבשרת_ציון">מבשרת ציון</option>
+                        <option value="ירושלים">ירושלים</option>
+                        <option value="חולון">חולון</option>
+                        <option value="אריאל">אריאל</option>
+                        <option value="כפר_סבא">כפר סבא</option>
+                    </select>
+                </form>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- scripts -->
+
+    <script defer
+            src="https://maps.googleapis.com/maps/api/js?callback=showMap&libraries=places&key=AIzaSyD4-kvJStsXKulK0xQmXSoRgblT4dyURn8">
+    </script>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/c6566f41fc.js" crossorigin="anonymous"></script>
+    <!-- scripts end -->
+
+</body>
+</html>
+
+
+<!-- AIzaSyD4-kvJStsXKulK0xQmXSoRgblT4dyURn8 -->
+<!-- AIzaSyAGvRPPxwy38HkFllkjVv40LQrpnuzz93E -->
+<!-- AIzaSyBTxM7T6bfyUVTKtfH0HJgaFjAQnWPov1k -->
