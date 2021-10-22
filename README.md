@@ -1,5 +1,5 @@
 # GIS-Project
-- GIS project-created website with firebase using JS,HTML,CSS.
+- GIS project- Created website with firebase using JS,HTML,CSS and Google API.
 - The website is to search Bikurofe hospital in Israel.
 
 ![](Image.jpg)
